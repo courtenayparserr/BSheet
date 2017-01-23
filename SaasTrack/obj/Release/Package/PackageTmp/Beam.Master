@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Beam.master.cs" Inherits="SaasTrack.Beam" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Beam</title>
+    <link rel="stylesheet" href="/Content/beam/style.css?v=1">
+
+    <script src="/Scripts/beam/head.js"></script>
+    <script>head.load
+  (
+    'https://use.fontawesome.com/8858084657.js',
+    '/scripts/jquery-1.10.2.min.js',
+    function () {
+        $(window).resize(function () {
+            var width = $(window).width();
+
+            if (width > 850 && $('#left-nav-toggle').is(':visible')) {
+                $('#left-nav').show().css('width', '160px');
+                $('#left-nav-toggle').hide();
+            }
+
+            if (width <= 850 && $('#left-nav').is(':visible')) {
+                $('#left-nav').hide().css('width', '180px');
+                $('#left-nav-toggle').show();
+            }
+        });
+
+        $('#left-nav-toggle').click(function () {
+            $('#left-nav').fadeIn();
+            $('#left-nav-toggle').hide();
+        });
+
+        $('.left-nav .fa-close').click(function () {
+            $('#left-nav').fadeOut();
+            $('#left-nav-toggle').show();
+        });
+    }
+  );
+    </script>
+
+    <script src="https://use.fontawesome.com/8858084657.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/Content/beam/images/favicon.png" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="left-nav-toggle" class="hide">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="body">
+            <div class="section header">
+
+                <a href="/">
+                    <img src="/Content/beam/images/logo.png" /></a>
+
+                <div class="links">
+                    <a href="#"><%: Context.User.Identity.GetUserName()  %></a>
+                    <span>/</span>
+                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                </div>
+
+            </div>
+            <div class="section main">
+
+                <div id="left-nav" class="left-nav hide">
+                    <i class="fa fa-close" aria-hidden="true"></i>                    
+                    <ul>
+                        <li><a href="/account/dashboard">Dashboard</a></li>
+                        <li class="selected">
+                            <a href="/Account/AddBankAccount">Accounts</a>
+                            <asp:Literal ID="accountHtml" runat="server"></asp:Literal>                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right-content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="section footer">
+                <a href="#">About</a> <span>/</span> <a href="#">Terms & Conditions</a> <span>/</span> &copy; Beam 2016
+            </div>
+        </div>
+    </form>
+</body>
+</html>

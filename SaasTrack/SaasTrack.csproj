@@ -1,0 +1,1087 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84151D76-A442-46FD-ABBC-5B06EB6C2DB3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaasTrack</RootNamespace>
+    <AssemblyName>SaasTrack</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CuttingEdge.Conditions, Version=1.2.0.11174, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\CuttingEdge.Conditions.1.2.0.0\lib\NET35\CuttingEdge.Conditions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net-loggly, Version=7.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net-loggly.7.2.1\lib\net40\log4net-loggly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2016.1.113.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2016\Bin45\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2016.1.113.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2016\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2015.1.225.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2016\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\Accounts.aspx" />
+    <Content Include="Account\AddBankAccount.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\AdminSignIn.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Dashboard - Copy.aspx" />
+    <Content Include="Account\Dashboard.aspx" />
+    <Content Include="Account\Employee.aspx" />
+    <Content Include="Account\EmployeeSettings.aspx" />
+    <Content Include="Account\EmployeeSystems.aspx" />
+    <Content Include="Account\Service.aspx" />
+    <Content Include="Account\Services.aspx" />
+    <Content Include="Account\Employees.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\ServiceSettings.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="App_Data\AddUserToUserDetails.sql" />
+    <Content Include="App_Data\CreateDatabase.sql" />
+    <Content Include="App_Data\CreateTables.sql" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\app.css" />
+    <Content Include="Content\beam\images\logo.png" />
+    <Content Include="Content\beam\style.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\components.css" />
+    <Content Include="Content\css\core - Copy.css" />
+    <Content Include="Content\css\core.css" />
+    <Content Include="Content\css\elements.css" />
+    <Content Include="Content\css\icons.css" />
+    <Content Include="Content\css\menu.css" />
+    <Content Include="Content\css\menu_light - Copy.css" />
+    <Content Include="Content\css\menu_light.css" />
+    <Content Include="Content\css\pages.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\variables.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\ionicons.svg" />
+    <Content Include="Content\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\fonts\themify.svg" />
+    <Content Include="Content\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Content\home\animate.css" />
+    <Content Include="Content\home\bootstrap-theme.css" />
+    <Content Include="Content\home\bootstrap-theme.min.css" />
+    <Content Include="Content\home\bootstrap.css" />
+    <Content Include="Content\home\bootstrap.min.css" />
+    <Content Include="Content\home\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\home\fonts\themify.svg" />
+    <Content Include="Content\home\images\bg1.jpg" />
+    <Content Include="Content\home\images\bg2.jpg" />
+    <Content Include="Content\home\images\favicon_1.ico" />
+    <Content Include="Content\home\images\mac.png" />
+    <Content Include="Content\home\images\preloader.gif" />
+    <Content Include="Content\home\images\tab2.png" />
+    <Content Include="Content\home\images\testi-1.jpg" />
+    <Content Include="Content\home\magnific-popup.css" />
+    <Content Include="Content\home\style.css" />
+    <Content Include="Content\home\themify-icons.css" />
+    <Content Include="Content\insignia\animate.css" />
+    <Content Include="Content\insignia\bootstrap.min.css" />
+    <Content Include="Content\insignia\font-awesome.css" />
+    <Content Include="Content\insignia\images\a1.jpg" />
+    <Content Include="Content\insignia\images\a2.jpg" />
+    <Content Include="Content\insignia\images\a3.jpg" />
+    <Content Include="Content\insignia\images\a4.jpg" />
+    <Content Include="Content\insignia\images\a7.jpg" />
+    <Content Include="Content\insignia\images\a8.jpg" />
+    <Content Include="Content\insignia\images\default-avatar-v9899025.png" />
+    <Content Include="Content\insignia\images\profile.jpg" />
+    <Content Include="Content\insignia\images\profile_small.jpg" />
+    <Content Include="Content\insignia\style.css" />
+    <Content Include="Content\saas-icons\15Five.png" />
+    <Content Include="Content\saas-icons\5apps Deploy.png" />
+    <Content Include="Content\saas-icons\Abacus.png" />
+    <Content Include="Content\saas-icons\ActiveCampaign.png" />
+    <Content Include="Content\saas-icons\AddThis.png" />
+    <Content Include="Content\saas-icons\Adobe Creative Cloud.png" />
+    <Content Include="Content\saas-icons\AdStage.png" />
+    <Content Include="Content\saas-icons\Aha.png" />
+    <Content Include="Content\saas-icons\Airbrake.png" />
+    <Content Include="Content\saas-icons\Aircall.png" />
+    <Content Include="Content\saas-icons\Amazon CloudFront.png" />
+    <Content Include="Content\saas-icons\Amazon DynamoDB.png" />
+    <Content Include="Content\saas-icons\Amazon EC2.png" />
+    <Content Include="Content\saas-icons\Amazon Elastic MapReduce.png" />
+    <Content Include="Content\saas-icons\Amazon ElastiCache.png" />
+    <Content Include="Content\saas-icons\Amazon Glacier.png" />
+    <Content Include="Content\saas-icons\Amazon Kinesis.png" />
+    <Content Include="Content\saas-icons\Amazon Lambda.png" />
+    <Content Include="Content\saas-icons\Amazon Machine Learning.png" />
+    <Content Include="Content\saas-icons\Amazon Mechanical Turk.png" />
+    <Content Include="Content\saas-icons\Amazon RDS.png" />
+    <Content Include="Content\saas-icons\Amazon Redshift.png" />
+    <Content Include="Content\saas-icons\Amazon Route 53.png" />
+    <Content Include="Content\saas-icons\Amazon S3.png" />
+    <Content Include="Content\saas-icons\Amazon SimpleDB.png" />
+    <Content Include="Content\saas-icons\Amazon Virtual Private Cloud.png" />
+    <Content Include="Content\saas-icons\Amplitude.png" />
+    <Content Include="Content\saas-icons\Apiary.png" />
+    <Content Include="Content\saas-icons\Appaloosa.png" />
+    <Content Include="Content\saas-icons\Arbor.png" />
+    <Content Include="Content\saas-icons\Asana.png" />
+    <Content Include="Content\saas-icons\Asset Panda.png" />
+    <Content Include="Content\saas-icons\Atlassian Cloud.png" />
+    <Content Include="Content\saas-icons\Attach.png" />
+    <Content Include="Content\saas-icons\Authorize.Net.png" />
+    <Content Include="Content\saas-icons\AWeber.png" />
+    <Content Include="Content\saas-icons\BackHub.png" />
+    <Content Include="Content\saas-icons\Balsamiq.png" />
+    <Content Include="Content\saas-icons\BambooHR.png" />
+    <Content Include="Content\saas-icons\Basecamp.png" />
+    <Content Include="Content\saas-icons\BetterCloud.png" />
+    <Content Include="Content\saas-icons\Bill.com.png" />
+    <Content Include="Content\saas-icons\Bitbucket.png" />
+    <Content Include="Content\saas-icons\Bitly.png" />
+    <Content Include="Content\saas-icons\Boomerang.png" />
+    <Content Include="Content\saas-icons\Box.png" />
+    <Content Include="Content\saas-icons\BrowserStack.png" />
+    <Content Include="Content\saas-icons\Buffer.png" />
+    <Content Include="Content\saas-icons\Bugcrowd.png" />
+    <Content Include="Content\saas-icons\Bugsnag.png" />
+    <Content Include="Content\saas-icons\CakeHR.png" />
+    <Content Include="Content\saas-icons\Calendly.png" />
+    <Content Include="Content\saas-icons\Campaign Monitor.png" />
+    <Content Include="Content\saas-icons\Capshare.png" />
+    <Content Include="Content\saas-icons\Capsule CRM.png" />
+    <Content Include="Content\saas-icons\Chargify.png" />
+    <Content Include="Content\saas-icons\CircleCI.png" />
+    <Content Include="Content\saas-icons\Cisco WebEx.png" />
+    <Content Include="Content\saas-icons\ClearBooks.png" />
+    <Content Include="Content\saas-icons\Clickatell.png" />
+    <Content Include="Content\saas-icons\CLIENTpulse.png" />
+    <Content Include="Content\saas-icons\CloudFlare.png" />
+    <Content Include="Content\saas-icons\CloudHealth Technologies.png" />
+    <Content Include="Content\saas-icons\CloudPassage.png" />
+    <Content Include="Content\saas-icons\CloudShark.png" />
+    <Content Include="Content\saas-icons\CloudSponge.png" />
+    <Content Include="Content\saas-icons\Code Climate.png" />
+    <Content Include="Content\saas-icons\Codeship.png" />
+    <Content Include="Content\saas-icons\Contentful.png" />
+    <Content Include="Content\saas-icons\Customer.io.png" />
+    <Content Include="Content\saas-icons\daPulse.png" />
+    <Content Include="Content\saas-icons\Databox.png" />
+    <Content Include="Content\saas-icons\Databricks.png" />
+    <Content Include="Content\saas-icons\Datadog.png" />
+    <Content Include="Content\saas-icons\Datto Backupify.png" />
+    <Content Include="Content\saas-icons\DeployBot.png" />
+    <Content Include="Content\saas-icons\Desk.com.png" />
+    <Content Include="Content\saas-icons\DigitalOcean.png" />
+    <Content Include="Content\saas-icons\Discourse.png" />
+    <Content Include="Content\saas-icons\DiscoverOrg.png" />
+    <Content Include="Content\saas-icons\Docker.png" />
+    <Content Include="Content\saas-icons\DocuSign.png" />
+    <Content Include="Content\saas-icons\Domo.png" />
+    <Content Include="Content\saas-icons\Dribbble.png" />
+    <Content Include="Content\saas-icons\Dropbox.png" />
+    <Content Include="Content\saas-icons\Earth Class Mail.png" />
+    <Content Include="Content\saas-icons\Email Hunter.png" />
+    <Content Include="Content\saas-icons\Email on Acid.png" />
+    <Content Include="Content\saas-icons\Errorception.png" />
+    <Content Include="Content\saas-icons\eShares.png" />
+    <Content Include="Content\saas-icons\EventBoard.png" />
+    <Content Include="Content\saas-icons\Evernote.png" />
+    <Content Include="Content\saas-icons\Expensify.png" />
+    <Content Include="Content\saas-icons\FastSpring.png" />
+    <Content Include="Content\saas-icons\Filestack.png" />
+    <Content Include="Content\saas-icons\Fluid UI.png" />
+    <Content Include="Content\saas-icons\FreshBooks.png" />
+    <Content Include="Content\saas-icons\Freshdesk.png" />
+    <Content Include="Content\saas-icons\Full Circle Insights.png" />
+    <Content Include="Content\saas-icons\FullContact API.png" />
+    <Content Include="Content\saas-icons\FullStory.png" />
+    <Content Include="Content\saas-icons\Geckoboard.png" />
+    <Content Include="Content\saas-icons\GitHub.png" />
+    <Content Include="Content\saas-icons\Glassdoor.png" />
+    <Content Include="Content\saas-icons\Gliffy.png" />
+    <Content Include="Content\saas-icons\GlobalWebIndex.png" />
+    <Content Include="Content\saas-icons\GoodData.png" />
+    <Content Include="Content\saas-icons\Google App Engine.png" />
+    <Content Include="Content\saas-icons\Google Apps.png" />
+    <Content Include="Content\saas-icons\Google Cloud Bigtable.png" />
+    <Content Include="Content\saas-icons\Google Cloud Datastore.png" />
+    <Content Include="Content\saas-icons\Google Cloud SQL.png" />
+    <Content Include="Content\saas-icons\Google Cloud Storage.png" />
+    <Content Include="Content\saas-icons\Google Compute Engine.png" />
+    <Content Include="Content\saas-icons\Google Container Engine.png" />
+    <Content Include="Content\saas-icons\GoToMeeting.png" />
+    <Content Include="Content\saas-icons\Groove.png" />
+    <Content Include="Content\saas-icons\Gusto.png" />
+    <Content Include="Content\saas-icons\Harvest Forecast.png" />
+    <Content Include="Content\saas-icons\Harvest.png" />
+    <Content Include="Content\saas-icons\HelloFax.png" />
+    <Content Include="Content\saas-icons\HelloSign.png" />
+    <Content Include="Content\saas-icons\HelpScout.png" />
+    <Content Include="Content\saas-icons\Heroku.png" />
+    <Content Include="Content\saas-icons\HipChat.png" />
+    <Content Include="Content\saas-icons\Hoefler &amp; Co..png" />
+    <Content Include="Content\saas-icons\Hootsuite.png" />
+    <Content Include="Content\saas-icons\HostGator.png" />
+    <Content Include="Content\saas-icons\Hotjar.png" />
+    <Content Include="Content\saas-icons\htmlBurger.png" />
+    <Content Include="Content\saas-icons\HubSpot.png" />
+    <Content Include="Content\saas-icons\IBM Bluemix.png" />
+    <Content Include="Content\saas-icons\imgix.png" />
+    <Content Include="Content\saas-icons\Influitive.png" />
+    <Content Include="Content\saas-icons\Insightly.png" />
+    <Content Include="Content\saas-icons\Inspectlet.png" />
+    <Content Include="Content\saas-icons\Intercom.png" />
+    <Content Include="Content\saas-icons\InVision.png" />
+    <Content Include="Content\saas-icons\InvoiceSherpa.png" />
+    <Content Include="Content\saas-icons\Iron.io.png" />
+    <Content Include="Content\saas-icons\issuu.png" />
+    <Content Include="Content\saas-icons\Join.me.png" />
+    <Content Include="Content\saas-icons\Kickbox.png" />
+    <Content Include="Content\saas-icons\LastPass.png" />
+    <Content Include="Content\saas-icons\Layer.png" />
+    <Content Include="Content\saas-icons\Lead Forensics.png" />
+    <Content Include="Content\saas-icons\Leadpages.png" />
+    <Content Include="Content\saas-icons\Lever.png" />
+    <Content Include="Content\saas-icons\Librato.png" />
+    <Content Include="Content\saas-icons\LinkedIn.png" />
+    <Content Include="Content\saas-icons\Linode.png" />
+    <Content Include="Content\saas-icons\Logentries.png" />
+    <Content Include="Content\saas-icons\Looker.png" />
+    <Content Include="Content\saas-icons\Lynda.com.png" />
+    <Content Include="Content\saas-icons\MailChimp.png" />
+    <Content Include="Content\saas-icons\Mailgun.png" />
+    <Content Include="Content\saas-icons\Mailjet.png" />
+    <Content Include="Content\saas-icons\Marketo.png" />
+    <Content Include="Content\saas-icons\Mashery.png" />
+    <Content Include="Content\saas-icons\Mattermark.png" />
+    <Content Include="Content\saas-icons\MaxMind.png" />
+    <Content Include="Content\saas-icons\Meldium.png" />
+    <Content Include="Content\saas-icons\Microsoft Azure.png" />
+    <Content Include="Content\saas-icons\Microsoft Office 365.png" />
+    <Content Include="Content\saas-icons\MindBody.png" />
+    <Content Include="Content\saas-icons\Mixpanel.png" />
+    <Content Include="Content\saas-icons\mLab.png" />
+    <Content Include="Content\saas-icons\MouseStats.png" />
+    <Content Include="Content\saas-icons\Moz.com.png" />
+    <Content Include="Content\saas-icons\myfax.png" />
+    <Content Include="Content\saas-icons\Net-Results.png" />
+    <Content Include="Content\saas-icons\NetSuite.png" />
+    <Content Include="Content\saas-icons\New Relic.png" />
+    <Content Include="Content\saas-icons\Noun Project.png" />
+    <Content Include="Content\saas-icons\Novatus.png" />
+    <Content Include="Content\saas-icons\Nutshell.png" />
+    <Content Include="Content\saas-icons\OneLogin.png" />
+    <Content Include="Content\saas-icons\Opbeat.png" />
+    <Content Include="Content\saas-icons\Open Exchange Rates.png" />
+    <Content Include="Content\saas-icons\OpsGenie.png" />
+    <Content Include="Content\saas-icons\OptinMonster.png" />
+    <Content Include="Content\saas-icons\PagerDuty.png" />
+    <Content Include="Content\saas-icons\Papertrail.png" />
+    <Content Include="Content\saas-icons\Pardot.png" />
+    <Content Include="Content\saas-icons\Paychex.png" />
+    <Content Include="Content\saas-icons\Periscope Data.png" />
+    <Content Include="Content\saas-icons\Pingdom.png" />
+    <Content Include="Content\saas-icons\Pipedrive.png" />
+    <Content Include="Content\saas-icons\PipelineDeals.png" />
+    <Content Include="Content\saas-icons\Pipetop.png" />
+    <Content Include="Content\saas-icons\Pivotal Tracker.png" />
+    <Content Include="Content\saas-icons\Podio.png" />
+    <Content Include="Content\saas-icons\Polldaddy.png" />
+    <Content Include="Content\saas-icons\Postmark.png" />
+    <Content Include="Content\saas-icons\ProductPlan.png" />
+    <Content Include="Content\saas-icons\Pulse.png" />
+    <Content Include="Content\saas-icons\Pusher.png" />
+    <Content Include="Content\saas-icons\Quay.png" />
+    <Content Include="Content\saas-icons\QuickBooks Online.png" />
+    <Content Include="Content\saas-icons\Rainmaker Platform.png" />
+    <Content Include="Content\saas-icons\Ranktrackr.png" />
+    <Content Include="Content\saas-icons\Readymag.png" />
+    <Content Include="Content\saas-icons\Recruiterbox.png" />
+    <Content Include="Content\saas-icons\Right Networks.png" />
+    <Content Include="Content\saas-icons\RightSignature.png" />
+    <Content Include="Content\saas-icons\RingCentral.png" />
+    <Content Include="Content\saas-icons\RJMetrics CloudBI.png" />
+    <Content Include="Content\saas-icons\RJMetrics Pipeline.png" />
+    <Content Include="Content\saas-icons\Roadmunk.png" />
+    <Content Include="Content\saas-icons\Rollbar.png" />
+    <Content Include="Content\saas-icons\Salesforce.png" />
+    <Content Include="Content\saas-icons\SalesLoft.png" />
+    <Content Include="Content\saas-icons\SalesWise.png" />
+    <Content Include="Content\saas-icons\SatisMeter.png" />
+    <Content Include="Content\saas-icons\Sauce Labs.png" />
+    <Content Include="Content\saas-icons\SchoolKeep.png" />
+    <Content Include="Content\saas-icons\Segment.png" />
+    <Content Include="Content\saas-icons\SellerCrowd.png" />
+    <Content Include="Content\saas-icons\SEMrush API.png" />
+    <Content Include="Content\saas-icons\SendGrid.png" />
+    <Content Include="Content\saas-icons\Sensu.png" />
+    <Content Include="Content\saas-icons\Sentry.png" />
+    <Content Include="Content\saas-icons\Server Density.png" />
+    <Content Include="Content\saas-icons\Shutterstock.png" />
+    <Content Include="Content\saas-icons\Sidekick.png" />
+    <Content Include="Content\saas-icons\Sigstr.png" />
+    <Content Include="Content\saas-icons\Skype.png" />
+    <Content Include="Content\saas-icons\Slack.png" />
+    <Content Include="Content\saas-icons\Snowflake Computing.png" />
+    <Content Include="Content\saas-icons\Snowplow.png" />
+    <Content Include="Content\saas-icons\SpringCM.png" />
+    <Content Include="Content\saas-icons\Squarespace.png" />
+    <Content Include="Content\saas-icons\Squrb.png" />
+    <Content Include="Content\saas-icons\StatusPage.io.png" />
+    <Content Include="Content\saas-icons\Strikingly.png" />
+    <Content Include="Content\saas-icons\SugarCRM.png" />
+    <Content Include="Content\saas-icons\Sumo Logic.png" />
+    <Content Include="Content\saas-icons\SumoMe.png" />
+    <Content Include="Content\saas-icons\Support Hero.png" />
+    <Content Include="Content\saas-icons\SurveyMonkey.png" />
+    <Content Include="Content\saas-icons\Swiftype.png" />
+    <Content Include="Content\saas-icons\TeamWeek.png" />
+    <Content Include="Content\saas-icons\TestRail.png" />
+    <Content Include="Content\saas-icons\The Hello Bar.png" />
+    <Content Include="Content\saas-icons\TinyPulse.png" />
+    <Content Include="Content\saas-icons\TokBox.png" />
+    <Content Include="Content\saas-icons\ToutApp.png" />
+    <Content Include="Content\saas-icons\TrackDuck.png" />
+    <Content Include="Content\saas-icons\Travis CI.png" />
+    <Content Include="Content\saas-icons\Trello.png" />
+    <Content Include="Content\saas-icons\Twilio.png" />
+    <Content Include="Content\saas-icons\UberConference.png" />
+    <Content Include="Content\saas-icons\Unbounce.png" />
+    <Content Include="Content\saas-icons\Uptime Robot.png" />
+    <Content Include="Content\saas-icons\UserTesting.png" />
+    <Content Include="Content\saas-icons\Ustream.png" />
+    <Content Include="Content\saas-icons\Vimeo.png" />
+    <Content Include="Content\saas-icons\Wable.png" />
+    <Content Include="Content\saas-icons\WhatRunsWhere.png" />
+    <Content Include="Content\saas-icons\Winmo.png" />
+    <Content Include="Content\saas-icons\Wistia.png" />
+    <Content Include="Content\saas-icons\Woopra.png" />
+    <Content Include="Content\saas-icons\WordPress.com.png" />
+    <Content Include="Content\saas-icons\Workable.png" />
+    <Content Include="Content\saas-icons\Workflow Max.png" />
+    <Content Include="Content\saas-icons\Workplace by Facebook.png" />
+    <Content Include="Content\saas-icons\WP Engine.png" />
+    <Content Include="Content\saas-icons\Wrike.png" />
+    <Content Include="Content\saas-icons\Wufoo.png" />
+    <Content Include="Content\saas-icons\Wunderlist.png" />
+    <Content Include="Content\saas-icons\Xactly.png" />
+    <Content Include="Content\saas-icons\Xero.png" />
+    <Content Include="Content\saas-icons\Yesware.png" />
+    <Content Include="Content\saas-icons\Zapier.png" />
+    <Content Include="Content\saas-icons\Zendesk.png" />
+    <Content Include="Content\saas-icons\Zenefits.png" />
+    <Content Include="Content\saas-icons\Zeplin.png" />
+    <Content Include="Content\saas-icons\Zoom.png" />
+    <Content Include="Content\saas-icons\ZoomInfo.png" />
+    <Content Include="Content\saas-icons\Zuora.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default - Copy.aspx" />
+    <Content Include="ebFormDropzone.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="Scripts\app\js\bootstrap.js" />
+    <Content Include="Scripts\app\js\bootstrap.min.js" />
+    <Content Include="Scripts\app\js\detect.js" />
+    <Content Include="Scripts\app\js\fastclick.js" />
+    <Content Include="Scripts\app\js\jquery.app.js" />
+    <Content Include="Scripts\app\js\jquery.blockUI.js" />
+    <Content Include="Scripts\app\js\jquery.core.js" />
+    <Content Include="Scripts\app\js\jquery.dashboard.js" />
+    <Content Include="Scripts\app\js\jquery.min.js" />
+    <Content Include="Scripts\app\js\jquery.nicescroll.js" />
+    <Content Include="Scripts\app\js\jquery.scrollTo.js" />
+    <Content Include="Scripts\app\js\jquery.scrollTo.min.js" />
+    <Content Include="Scripts\app\js\jquery.slimscroll.js" />
+    <Content Include="Scripts\app\js\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\app\js\modernizr.min.js" />
+    <Content Include="Scripts\app\js\npm.js" />
+    <Content Include="Scripts\app\js\skycons.min.js" />
+    <Content Include="Scripts\app\js\waves.js" />
+    <Content Include="Scripts\app\js\wow.min.js" />
+    <Content Include="Scripts\app\plugins\counterup\jquery.counterup.min.js" />
+    <Content Include="Scripts\app\plugins\jquery-circliful\css\jquery.circliful.css" />
+    <Content Include="Scripts\app\plugins\jquery-circliful\js\jquery.circliful.js" />
+    <Content Include="Scripts\app\plugins\jquery-circliful\js\jquery.circliful.min.js" />
+    <Content Include="Scripts\app\plugins\jquery-sparkline\jquery.sparkline.min.js" />
+    <Content Include="Scripts\app\plugins\skyicons\skycons.min.js" />
+    <Content Include="Scripts\app\plugins\switchery\switchery.min.css" />
+    <Content Include="Scripts\app\plugins\switchery\switchery.min.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\jquery.waypoints.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\jquery.waypoints.min.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\noframework.waypoints.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\noframework.waypoints.min.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\shortcuts\infinite.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\shortcuts\infinite.min.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\shortcuts\inview.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\shortcuts\inview.min.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\shortcuts\sticky.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\shortcuts\sticky.min.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\waypoints.debug.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\zepto.waypoints.js" />
+    <Content Include="Scripts\app\plugins\waypoints\lib\zepto.waypoints.min.js" />
+    <Content Include="Scripts\beam\head.js" />
+    <Content Include="Scripts\home\bootstrap.min.js" />
+    <Content Include="Scripts\home\jquery.app.js" />
+    <Content Include="Scripts\home\jquery.counterup.min.js" />
+    <Content Include="Scripts\home\jquery.easing.1.3.min.js" />
+    <Content Include="Scripts\home\jquery.js" />
+    <Content Include="Scripts\home\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\home\jquery.stellar.min.js" />
+    <Content Include="Scripts\home\jquery.sticky.js" />
+    <Content Include="Scripts\home\SmoothScroll.js" />
+    <Content Include="Scripts\home\waypoints.min.js" />
+    <Content Include="Scripts\home\wow.min.js" />
+    <Content Include="Scripts\insignia\bootstrap.min.js" />
+    <Content Include="Scripts\insignia\inspinia.js" />
+    <Content Include="Scripts\insignia\jquery-2.1.1.js" />
+    <Content Include="Scripts\insignia\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Scripts\insignia\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\insignia\jquery-ui.min.js" />
+    <Content Include="Scripts\insignia\jquery.easypiechart.js" />
+    <Content Include="Scripts\insignia\jquery.flot.js" />
+    <Content Include="Scripts\insignia\jquery.flot.pie.js" />
+    <Content Include="Scripts\insignia\jquery.flot.resize.js" />
+    <Content Include="Scripts\insignia\jquery.flot.spline.js" />
+    <Content Include="Scripts\insignia\jquery.flot.symbol.js" />
+    <Content Include="Scripts\insignia\jquery.flot.time.js" />
+    <Content Include="Scripts\insignia\jquery.flot.tooltip.min.js" />
+    <Content Include="Scripts\insignia\jquery.metisMenu.js" />
+    <Content Include="Scripts\insignia\jquery.peity.min.js" />
+    <Content Include="Scripts\insignia\jquery.slimscroll.min.js" />
+    <Content Include="Scripts\insignia\jquery.sparkline.min.js" />
+    <Content Include="Scripts\insignia\pace.min.js" />
+    <Content Include="Scripts\insignia\peity-demo.js" />
+    <Content Include="Scripts\insignia\sparkline-demo.js" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="Blank.Master" />
+    <Content Include="Beam.Master" />
+    <Content Include="Home.Master" />
+    <Content Include="Content\home\bootstrap-theme.css.map" />
+    <Content Include="Content\home\bootstrap-theme.min.css.map" />
+    <Content Include="Content\home\bootstrap.css.map" />
+    <Content Include="Content\home\bootstrap.min.css.map" />
+    <Content Include="Content\home\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\home\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\home\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\home\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\home\fonts\themify.eot" />
+    <Content Include="Content\home\fonts\themify.ttf" />
+    <Content Include="Content\home\fonts\themify.woff" />
+    <Content Include="Insignia.Master" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\ionicons.eot" />
+    <Content Include="Content\fonts\ionicons.ttf" />
+    <Content Include="Content\fonts\ionicons.woff" />
+    <Content Include="Content\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\fonts\themify.eot" />
+    <Content Include="Content\fonts\themify.ttf" />
+    <Content Include="Content\fonts\themify.woff" />
+    <Content Include="Content\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Content\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Content\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Content\fonts\weathericons-regular-webfont.woff2" />
+    <None Include="Properties\PublishProfiles\SaasTrack20160907115057.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="App.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Accounts.aspx.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Accounts.aspx.designer.cs">
+      <DependentUpon>Accounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AddBankAccount.aspx.cs">
+      <DependentUpon>AddBankAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddBankAccount.aspx.designer.cs">
+      <DependentUpon>AddBankAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminSignIn.aspx.cs">
+      <DependentUpon>AdminSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AdminSignIn.aspx.designer.cs">
+      <DependentUpon>AdminSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dashboard - Copy.aspx.cs">
+      <DependentUpon>Dashboard - Copy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dashboard - Copy.aspx.designer.cs">
+      <DependentUpon>Dashboard - Copy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EmployeeSettings.aspx.cs">
+      <DependentUpon>EmployeeSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EmployeeSettings.aspx.designer.cs">
+      <DependentUpon>EmployeeSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\EmployeeSystems.aspx.cs">
+      <DependentUpon>EmployeeSystems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EmployeeSystems.aspx.designer.cs">
+      <DependentUpon>EmployeeSystems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Service.aspx.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Service.aspx.designer.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ServiceSettings.aspx.cs">
+      <DependentUpon>ServiceSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ServiceSettings.aspx.designer.cs">
+      <DependentUpon>ServiceSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\IntrosController.cs" />
+    <Compile Include="ebFormDropzone.aspx.cs">
+      <DependentUpon>ebFormDropzone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ebFormDropzone.aspx.designer.cs">
+      <DependentUpon>ebFormDropzone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insignia.Master.cs">
+      <DependentUpon>Insignia.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insignia.Master.designer.cs">
+      <DependentUpon>Insignia.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Beam.Master.cs">
+      <DependentUpon>Beam.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Beam.Master.designer.cs">
+      <DependentUpon>Beam.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.Master.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blank.Master.designer.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BankAccountController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Default - Copy.aspx.cs">
+      <DependentUpon>Default - Copy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default - Copy.aspx.designer.cs">
+      <DependentUpon>Default - Copy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App.Master.cs">
+      <DependentUpon>App.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Master.designer.cs">
+      <DependentUpon>App.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plaid.Net\Plaid.Net.csproj">
+      <Project>{1dad3cf9-1b31-4069-853d-1d0c0ca84262}</Project>
+      <Name>Plaid.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Saastrack.DAL\Saastrack.DAL.csproj">
+      <Project>{a44c0255-7bc5-40d0-b2e8-95482439da8f}</Project>
+      <Name>Saastrack.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58197</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58197</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

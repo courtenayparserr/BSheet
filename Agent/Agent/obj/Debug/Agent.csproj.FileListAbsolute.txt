@@ -1,0 +1,1 @@
+C:\projects\SaasTrack\Agent\Agent\bin\Debug\Agent.exe.config

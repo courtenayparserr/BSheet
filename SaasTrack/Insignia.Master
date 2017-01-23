@@ -1,0 +1,673 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Insignia.Master.cs" Inherits="SaasTrack.Insignia" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPINIA | Dashboard v.2</title>
+    <link href="/content/insignia/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/content/insignia/animate.css" rel="stylesheet">
+    <link href="/content/insignia/style.css" rel="stylesheet">
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+<body class=" pace-done">
+    <form id="form1" runat="server">
+        <div class="pace  pace-inactive">
+            <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+                <div class="pace-progress-inner"></div>
+            </div>
+            <div class="pace-activity"></div>
+        </div>
+        <div id="wrapper">
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li class="nav-header">
+                            <div class="dropdown profile-element">
+                                <span>
+                                    <img alt="image" class="img-circle" src="/content/insignia/images/default-avatar-v9899025.png" style="width:32px;"/>
+                                </span>
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <span class="clear">
+                                        <span class="block m-t-xs">
+                                            <strong class="font-bold"><asp:Literal ID="currentUserName" runat="server"></asp:Literal></strong>
+                                        </span>
+                                    </span>
+                                </a>                                
+                            </div>
+                            <div class="logo-element">
+                                IN+
+                            </div>
+                        </li>
+                        <asp:Literal ID="accountHtml" runat="server"></asp:Literal>
+                    </ul>
+                </div>
+            </nav>
+            <div id="page-wrapper" class="gray-bg" style="min-height: 911px;">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="right-sidebar">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                    <div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">
+                        <ul class="nav nav-tabs navs-3">
+                            <li class="active">
+                                <a data-toggle="tab" href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#tab-1">Notes
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#tab-2">Projects
+                                </a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#tab-3">
+                                    <i class="fa fa-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="sidebar-title">
+                                    <h3><i class="fa fa-comments-o"></i>Latest Notes</h3>
+                                    <small><i class="fa fa-tim"></i>You have 10 new message.</small>
+                                </div>
+                                <div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a1.jpg">
+                                                <div class="m-t-xs">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                There are many variations of passages of Lorem Ipsum available.
+                                            <br>
+                                                <small class="text-muted">Today 4:21 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a2.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                            <br>
+                                                <small class="text-muted">Yesterday 2:45 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a3.jpg">
+                                                <div class="m-t-xs">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                            <br>
+                                                <small class="text-muted">Yesterday 1:10 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a4.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                            <br>
+                                                <small class="text-muted">Monday 8:37 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a8.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                All the Lorem Ipsum generators on the Internet tend to repeat.
+                                            <br>
+                                                <small class="text-muted">Today 4:21 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a7.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                            <br>
+                                                <small class="text-muted">Yesterday 2:45 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a3.jpg">
+                                                <div class="m-t-xs">
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                    <i class="fa fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
+                                            <br>
+                                                <small class="text-muted">Yesterday 1:10 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-message">
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="pull-left text-center">
+                                                <img alt="image" class="img-circle message-avatar" src="/content/insignia/images/a4.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                Uncover many web sites still in their infancy. Various versions have.
+                                            <br>
+                                                <small class="text-muted">Monday 8:37 pm</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="sidebar-title">
+                                    <h3><i class="fa fa-cube"></i>Latest projects</h3>
+                                    <small><i class="fa fa-tim"></i>You have 14 projects. 10 not completed.</small>
+                                </div>
+                                <ul class="sidebar-list">
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Business valuation</h4>
+                                            It is a long established fact that a reader will be distracted.
+
+                                        <div class="small">Completion with: 22%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                            </div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Contract with Company </h4>
+                                            Many desktop publishing packages and web page editors.
+
+                                        <div class="small">Completion with: 48%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 48%;" class="progress-bar"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Meeting</h4>
+                                            By the readable content of a page when looking at its layout.
+
+                                        <div class="small">Completion with: 14%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <span class="label label-primary pull-right">NEW</span>
+                                            <h4>The generated</h4>
+                                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
+                                            There are many variations of passages of Lorem Ipsum available.
+                                        <div class="small">Completion with: 22%</div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Business valuation</h4>
+                                            It is a long established fact that a reader will be distracted.
+
+                                        <div class="small">Completion with: 22%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                            </div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Contract with Company </h4>
+                                            Many desktop publishing packages and web page editors.
+
+                                        <div class="small">Completion with: 48%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 48%;" class="progress-bar"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <div class="small pull-right m-t-xs">9 hours ago</div>
+                                            <h4>Meeting</h4>
+                                            By the readable content of a page when looking at its layout.
+
+                                        <div class="small">Completion with: 14%</div>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://webapplayers.com/inspinia_admin-v2.5/dashboard_2.html#">
+                                            <span class="label label-primary pull-right">NEW</span>
+                                            <h4>The generated</h4>
+                                            <!--<div class="small pull-right m-t-xs">9 hours ago</div>-->
+                                            There are many variations of passages of Lorem Ipsum available.
+                                        <div class="small">Completion with: 22%</div>
+                                            <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab-3" class="tab-pane">
+                                <div class="sidebar-title">
+                                    <h3><i class="fa fa-gears"></i>Settings</h3>
+                                    <small><i class="fa fa-tim"></i>You have 14 projects. 10 not completed.</small>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Show notifications
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                            <label class="onoffswitch-label" for="example">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Disable Chat
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" checked="" class="onoffswitch-checkbox" id="example2">
+                                            <label class="onoffswitch-label" for="example2">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Enable history
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                            <label class="onoffswitch-label" for="example3">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Show charts
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                            <label class="onoffswitch-label" for="example4">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Offline users
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                                            <label class="onoffswitch-label" for="example5">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Global search
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" checked="" name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                                            <label class="onoffswitch-label" for="example6">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setings-item">
+                                    <span>Update everyday
+                                    </span>
+                                    <div class="switch">
+                                        <div class="onoffswitch">
+                                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                            <label class="onoffswitch-label" for="example7">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-content">
+                                    <h4>Settings</h4>
+                                    <div class="small">
+                                        I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    And typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 752.604px; background: rgb(0, 0, 0);"></div>
+                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.4; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Mainly scripts -->
+        <script src="/scripts/insignia/jquery-2.1.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+        <script src="/scripts/insignia/bootstrap.min.js"></script>
+        <script src="/scripts/insignia/jquery.metisMenu.js"></script>
+        <script src="/scripts/insignia/jquery.slimscroll.min.js"></script>
+        <!-- Flot -->
+        <script src="/scripts/insignia/jquery.flot.js"></script>
+        <script src="/scripts/insignia/jquery.flot.tooltip.min.js"></script>
+        <script src="/scripts/insignia/jquery.flot.spline.js"></script>
+        <script src="/scripts/insignia/jquery.flot.resize.js"></script>
+        <script src="/scripts/insignia/jquery.flot.pie.js"></script>
+        <script src="/scripts/insignia/jquery.flot.symbol.js"></script>
+        <script src="/scripts/insignia/jquery.flot.time.js"></script>
+        <!-- Peity -->
+        <script src="/scripts/insignia/jquery.peity.min.js"></script>
+        <script src="/scripts/insignia/peity-demo.js"></script>
+        <!-- Custom and plugin javascript -->
+        <script src="/scripts/insignia/inspinia.js"></script>
+        <script src="/scripts/insignia/pace.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="/scripts/insignia/jquery-ui.min.js"></script>
+        <!-- Jvectormap -->
+        <script src="/scripts/insignia/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="/scripts/insignia/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- EayPIE -->
+        <script src="/scripts/insignia/jquery.easypiechart.js"></script>
+        <!-- Sparkline -->
+        <script src="/scripts/insignia/jquery.sparkline.min.js"></script>
+        <!-- Sparkline demo data  -->
+        <script src="/scripts/insignia/sparkline-demo.js"></script>
+        
+        <script>
+            // Config box
+
+            // Enable/disable fixed top navbar
+            $('#fixednavbar').click(function () {
+                if ($('#fixednavbar').is(':checked')) {
+                    $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
+                    $("body").removeClass('boxed-layout');
+                    $("body").addClass('fixed-nav');
+                    $('#boxedlayout').prop('checked', false);
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("boxedlayout", 'off');
+                    }
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar", 'on');
+                    }
+                } else {
+                    $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+                    $("body").removeClass('fixed-nav');
+                    $("body").removeClass('fixed-nav-basic');
+                    $('#fixednavbar2').prop('checked', false);
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar", 'off');
+                    }
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar2", 'off');
+                    }
+                }
+            });
+
+            // Enable/disable fixed top navbar
+            $('#fixednavbar2').click(function () {
+                if ($('#fixednavbar2').is(':checked')) {
+                    $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
+                    $("body").removeClass('boxed-layout');
+                    $("body").addClass('fixed-nav').addClass('fixed-nav-basic');
+                    $('#boxedlayout').prop('checked', false);
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("boxedlayout", 'off');
+                    }
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar2", 'on');
+                    }
+                } else {
+                    $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+                    $("body").removeClass('fixed-nav').removeClass('fixed-nav-basic');
+                    $('#fixednavbar').prop('checked', false);
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar2", 'off');
+                    }
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar", 'off');
+                    }
+                }
+            });
+
+            // Enable/disable fixed sidebar
+            $('#fixedsidebar').click(function () {
+                if ($('#fixedsidebar').is(':checked')) {
+                    $("body").addClass('fixed-sidebar');
+                    $('.sidebar-collapse').slimScroll({
+                        height: '100%',
+                        railOpacity: 0.9
+                    });
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixedsidebar", 'on');
+                    }
+                } else {
+                    $('.sidebar-collapse').slimscroll({ destroy: true });
+                    $('.sidebar-collapse').attr('style', '');
+                    $("body").removeClass('fixed-sidebar');
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixedsidebar", 'off');
+                    }
+                }
+            });
+
+            // Enable/disable collapse menu
+            $('#collapsemenu').click(function () {
+                if ($('#collapsemenu').is(':checked')) {
+                    $("body").addClass('mini-navbar');
+                    SmoothlyMenu();
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("collapse_menu", 'on');
+                    }
+
+                } else {
+                    $("body").removeClass('mini-navbar');
+                    SmoothlyMenu();
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("collapse_menu", 'off');
+                    }
+                }
+            });
+
+            // Enable/disable boxed layout
+            $('#boxedlayout').click(function () {
+                if ($('#boxedlayout').is(':checked')) {
+                    $("body").addClass('boxed-layout');
+                    $('#fixednavbar').prop('checked', false);
+                    $('#fixednavbar2').prop('checked', false);
+                    $(".navbar-fixed-top").removeClass('navbar-fixed-top').addClass('navbar-static-top');
+                    $("body").removeClass('fixed-nav');
+                    $("body").removeClass('fixed-nav-basic');
+                    $(".footer").removeClass('fixed');
+                    $('#fixedfooter').prop('checked', false);
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar", 'off');
+                    }
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixednavbar2", 'off');
+                    }
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixedfooter", 'off');
+                    }
+
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("boxedlayout", 'on');
+                    }
+                } else {
+                    $("body").removeClass('boxed-layout');
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("boxedlayout", 'off');
+                    }
+                }
+            });
+
+            // Enable/disable fixed footer
+            $('#fixedfooter').click(function () {
+                if ($('#fixedfooter').is(':checked')) {
+                    $('#boxedlayout').prop('checked', false);
+                    $("body").removeClass('boxed-layout');
+                    $(".footer").addClass('fixed');
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("boxedlayout", 'off');
+                    }
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixedfooter", 'on');
+                    }
+                } else {
+                    $(".footer").removeClass('fixed');
+
+                    if (localStorageSupport) {
+                        localStorage.setItem("fixedfooter", 'off');
+                    }
+                }
+            });
+
+            if (localStorageSupport) {
+                var collapse = localStorage.getItem("collapse_menu");
+                var fixedsidebar = localStorage.getItem("fixedsidebar");
+                var fixednavbar = localStorage.getItem("fixednavbar");
+                var fixednavbar2 = localStorage.getItem("fixednavbar2");
+                var boxedlayout = localStorage.getItem("boxedlayout");
+                var fixedfooter = localStorage.getItem("fixedfooter");
+
+                if (collapse == 'on') {
+                    $('#collapsemenu').prop('checked', 'checked')
+                }
+                if (fixedsidebar == 'on') {
+                    $('#fixedsidebar').prop('checked', 'checked')
+                }
+                if (fixednavbar == 'on') {
+                    $('#fixednavbar').prop('checked', 'checked')
+                }
+                if (fixednavbar2 == 'on') {
+                    $('#fixednavbar2').prop('checked', 'checked')
+                }
+                if (boxedlayout == 'on') {
+                    $('#boxedlayout').prop('checked', 'checked')
+                }
+                if (fixedfooter == 'on') {
+                    $('#fixedfooter').prop('checked', 'checked')
+                }
+            }
+        </script>
+    </form>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-85539517-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
+
+
+

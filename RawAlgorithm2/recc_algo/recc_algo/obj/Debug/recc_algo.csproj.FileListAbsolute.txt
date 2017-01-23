@@ -1,0 +1,12 @@
+C:\Users\V\Desktop\upwork\csv_grouping\recc_algo\recc_algo\bin\Debug\recc_algo.exe.config
+C:\Users\V\Desktop\upwork\csv_grouping\recc_algo\recc_algo\bin\Debug\recc_algo.exe
+C:\Users\V\Desktop\upwork\csv_grouping\recc_algo\recc_algo\bin\Debug\recc_algo.pdb
+C:\Users\V\Desktop\upwork\csv_grouping\recc_algo\recc_algo\obj\Debug\recc_algo.csprojResolveAssemblyReference.cache
+C:\Users\V\Desktop\upwork\csv_grouping\recc_algo\recc_algo\obj\Debug\recc_algo.exe
+C:\Users\V\Desktop\upwork\csv_grouping\recc_algo\recc_algo\obj\Debug\recc_algo.pdb
+C:\projects\SaasTrack\RawAlgorithm2\recc_algo\recc_algo\bin\Debug\recc_algo.exe.config
+C:\projects\SaasTrack\RawAlgorithm2\recc_algo\recc_algo\obj\Debug\recc_algo.exe
+C:\projects\SaasTrack\RawAlgorithm2\recc_algo\recc_algo\obj\Debug\recc_algo.pdb
+C:\projects\SaasTrack\RawAlgorithm2\recc_algo\recc_algo\bin\Debug\recc_algo.exe
+C:\projects\SaasTrack\RawAlgorithm2\recc_algo\recc_algo\bin\Debug\recc_algo.pdb
+C:\projects\SaasTrack\RawAlgorithm2\recc_algo\recc_algo\obj\Debug\recc_algo.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+C:\projects\SaasTrack\Plaid.Net\bin\Release\Plaid.Net.dll.config
+C:\projects\SaasTrack\Plaid.Net\bin\Release\Plaid.Net.dll
+C:\projects\SaasTrack\Plaid.Net\bin\Release\Plaid.Net.pdb
+C:\projects\SaasTrack\Plaid.Net\bin\Release\CuttingEdge.Conditions.dll
+C:\projects\SaasTrack\Plaid.Net\bin\Release\Newtonsoft.Json.dll
+C:\projects\SaasTrack\Plaid.Net\bin\Release\CuttingEdge.Conditions.xml
+C:\projects\SaasTrack\Plaid.Net\bin\Release\Newtonsoft.Json.xml
+C:\projects\SaasTrack\Plaid.Net\obj\Release\Plaid.Net.dll
+C:\projects\SaasTrack\Plaid.Net\obj\Release\Plaid.Net.pdb
+C:\projects\SaasTrack\Plaid.Net\obj\Release\Plaid.Net.csprojResolveAssemblyReference.cache

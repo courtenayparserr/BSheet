@@ -1,0 +1,1 @@
+﻿SELECT DatabaseId FROM Employees where Email = 'courtenay@sharepoinTTutorials.net'

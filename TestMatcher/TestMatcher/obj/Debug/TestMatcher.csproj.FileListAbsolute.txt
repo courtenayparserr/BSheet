@@ -1,0 +1,5 @@
+C:\projects\SaasTrack\TestMatcher\TestMatcher\bin\Debug\TestMatcher.exe.config
+C:\projects\SaasTrack\TestMatcher\TestMatcher\bin\Debug\TestMatcher.exe
+C:\projects\SaasTrack\TestMatcher\TestMatcher\bin\Debug\TestMatcher.pdb
+C:\projects\SaasTrack\TestMatcher\TestMatcher\obj\Debug\TestMatcher.exe
+C:\projects\SaasTrack\TestMatcher\TestMatcher\obj\Debug\TestMatcher.pdb

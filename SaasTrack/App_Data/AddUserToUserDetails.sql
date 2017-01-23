@@ -1,0 +1,1 @@
+﻿INSERT INTO UserDetails (DatabaseId, UserId, InitialProcessed, InitialPlaid, LastProcessed, LastProcessedPlaid, Locked) VALUES ('%dbName%','%userid%', 0,0, GETDATE(),GETDATE(), 'false');

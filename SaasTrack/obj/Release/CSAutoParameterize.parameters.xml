@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=antares-sptutorials.australiaeast.cloudapp.azure.com;Integrated Security=False;User ID=courtz;Password=L!v3rpool123;Initial Catalog=Beam;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\projects\\SaasTrack\\SaasTrack\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnectionDummy-Web.config Connection String" description="DefaultConnectionDummy Connection String used in web.config by the application to access the database." defaultValue="Data Source=antares-sptutorials.australiaeast.cloudapp.azure.com;Integrated Security=False;User ID=courtz;Password=L!v3rpool123;Initial Catalog=BeamDummy;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\projects\\SaasTrack\\SaasTrack\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnectionDummy']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnectionUserDb-Web.config Connection String" description="DefaultConnectionUserDb Connection String used in web.config by the application to access the database." defaultValue="Data Source=antares-sptutorials.australiaeast.cloudapp.azure.com;Integrated Security=False;User ID=courtz;Password=L!v3rpool123;Initial Catalog={dbname};" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\projects\\SaasTrack\\SaasTrack\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnectionUserDb']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnectionWithoutDB-Web.config Connection String" description="DefaultConnectionWithoutDB Connection String used in web.config by the application to access the database." defaultValue="Data Source=antares-sptutorials.australiaeast.cloudapp.azure.com;Integrated Security=False;User ID=courtz;Password=L!v3rpool123;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\projects\\SaasTrack\\SaasTrack\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnectionWithoutDB']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,1 @@
+﻿SELECT * FROM dbo.MotherSubscriptions_BilledAs where Name LIKE '%google%'
